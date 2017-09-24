@@ -1,35 +1,44 @@
 {
   "name": "kraken-api-universal-client",
   "version": "0.1.0",
+  "author": "Fredrik Olovsson (http://fredrikolovsson.com)",
+  "license": "MIT",
   "description": "Universal (browser & Node.js) client for the Kraken API",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fredrikolovsson/kraken-api-universal-client.git"
-  },
   "keywords": [
     "kraken",
     "api",
+    "cryptocurrency",
+    "bitcoin",
+    "exchange",
+    "btc",
+    "ethereum",
     "universal",
     "client",
     "isomorphic",
     "fetch",
     "promise"
   ],
-  "author": "Fredrik Olovsson (http://fredrikolovsson.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/fredrikolovsson/kraken-api-universal-client/issues"
+  "homepage":
+    "https://github.com/fredrikolovsson/kraken-api-universal-client#README",
+  "repository": {
+    "type": "git",
+    "url":
+      "git+https://github.com/fredrikolovsson/kraken-api-universal-client.git"
   },
-  "homepage": "https://github.com/fredrikolovsson/kraken-api-universal-client#README",
+  "bugs": {
+    "url":
+      "https://github.com/fredrikolovsson/kraken-api-universal-client/issues"
+  },
   "main": "build/index.js",
-  "babel": {
-    "presets": [
-      "latest"
-    ]
+  "jest": {
+    "automock": false,
+    "testEnvironment": "jsdom",
+    "testPathIgnorePatterns": ["./build"],
+    "setupFiles": ["./src/setupTests.js"]
   },
   "scripts": {
     "dev": "watch 'npm run build' src",
-    "build": "babel src -d build",
+    "build": "babel src -d build --copy-files",
     "lint": "eslint 'src/**/*.js'",
     "test": "jest",
     "test:watch": "npm test -- --watch",
@@ -37,16 +46,23 @@
     "release": "np"
   },
   "dependencies": {
-    "fetch-ponyfill": "^4.1.0"
+    "buffer": "^5.0.6",
+    "crypto-browserify": "^3.11.1",
+    "fetch-ponyfill": "^4.1.0",
+    "got": "^7.1.0",
+    "js-base64": "^2.1.9",
+    "qs": "^6.5.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-preset-latest": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-jest": "^20.0.3",
     "jest": "^20.0.4",
+    "jest-fetch-mock": "^1.2.1",
     "np": "^2.16.0",
     "watch": "^1.0.2"
   },
