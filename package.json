@@ -40,8 +40,9 @@
     "dev": "watch 'npm run build' src",
     "build": "babel src -d build --copy-files",
     "lint": "eslint 'src/**/*.js'",
-    "test": "jest",
-    "test:watch": "npm test -- --watch",
+    "test": "npm run test:unit && npm run lint",
+    "test:unit": "jest",
+    "test:unit:watch": "npm run test:unit -- --watch",
     "prepublish": "npm run build",
     "release": "np"
   },
