@@ -4,6 +4,9 @@ build
 # Editor settings
 .vscode/*
 
+# For making test requests
+mock.js
+
 # Below is the default Node .gitignore by GitHub
 
 # Logs

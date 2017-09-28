@@ -2,19 +2,25 @@
   "env": {
     "jest/globals": true
   },
-  "extends": [
-    "airbnb-base",
-    "plugin:jest/recommended"
-  ],
-  "plugins": [
-    "jest"
-  ],
+  "extends": ["airbnb-base", "plugin:jest/recommended"],
+  "plugins": ["jest"],
   "rules": {
-    "semi": [
-      2,
-      "never"
-    ],
     "arrow-body-style": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.js", "**/setupTests.js"]
+      }
+    ],
+    "semi": [2, "never"],
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": false,
+        "natural": true
+      }
+    ]
   }
 }
