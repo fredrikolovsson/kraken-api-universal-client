@@ -18,24 +18,22 @@
     "fetch",
     "promise"
   ],
-  "homepage": "https://github.com/fredrikolovsson/kraken-api-universal-client#README",
+  "homepage":
+    "https://github.com/fredrikolovsson/kraken-api-universal-client#README",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fredrikolovsson/kraken-api-universal-client.git"
+    "url":
+      "git+https://github.com/fredrikolovsson/kraken-api-universal-client.git"
   },
   "bugs": {
-    "url": "https://github.com/fredrikolovsson/kraken-api-universal-client/issues"
+    "url":
+      "https://github.com/fredrikolovsson/kraken-api-universal-client/issues"
   },
   "main": "build/index.js",
   "jest": {
     "automock": false,
     "testEnvironment": "jsdom",
-    "testPathIgnorePatterns": [
-      "./build"
-    ],
-    "setupFiles": [
-      "./src/setupTests.js"
-    ]
+    "setupFiles": ["./src/setupTests.js"]
   },
   "scripts": {
     "dev": "watch 'npm run build' src",
