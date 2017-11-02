@@ -1,6 +1,6 @@
 {
   "name": "kraken-api-universal-client",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Fredrik Olovsson (http://fredrikolovsson.com)",
   "license": "MIT",
   "description": "Universal (browser & Node.js) client for the Kraken API",
@@ -33,7 +33,6 @@
   "jest": {
     "automock": false,
     "testEnvironment": "jsdom",
-    "testPathIgnorePatterns": ["./build"],
     "setupFiles": ["./src/setupTests.js"]
   },
   "scripts": {
